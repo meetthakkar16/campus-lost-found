@@ -71,7 +71,17 @@ def view_items():
         return
         
     for item in items:
-        print (item)
+        print ("\nID:", item["id"])
+        print ("Report type:", item["report type"])
+        print ("Type:", item["type"])
+        print ("Brand:", item["brand"])
+        print ("Colour:", item["colour"])
+        print ("Location:", item["location"])
+        print ("Date:", item["date"])
+        print ("Description:", item["description"])
+        print ("Status: ", item["status"])
+
+        print ("-------------------------")
 
 print ("Campus Lost and Found Matcher")
 print("--------------------------------")
