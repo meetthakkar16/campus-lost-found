@@ -2,6 +2,7 @@ items = []
 next_id = 1
 
 def add_lost_item():
+
     global next_id
 
     print ("adding a lost item")
@@ -31,6 +32,16 @@ def add_lost_item():
     print ("lost item created") 
     print (item)
 
+def view_items():
+    print ("All reported items")
+
+    if not items:
+        print ("No items found")
+        return
+        
+    for item in items:
+        print (item)
+
 print ("Campus Lost and Found Matcher")
 print("--------------------------------")
 
@@ -55,7 +66,7 @@ while choice != "8":
         print ("Adding a found item\n")
 
     elif choice == "3":
-        print ("Viewing items\n")        
+        view_items()    
 
     elif choice == "4":
         print ("Searching items\n")
