@@ -32,6 +32,37 @@ def add_lost_item():
     print ("lost item created") 
     print (item)
 
+def add_found_item():
+
+    global next_id
+
+    print ("adding a found items")
+
+    item_type = input ("Enter item type: ")
+    brand = input ("Enter the brand: ")
+    colour = input ("Enter the colour: ")
+    location = input ("Enter the location: ")
+    date = input ("Enter the date: ")
+    description = input ("Enter description: ")
+
+    item = {
+        "id": next_id,
+        "report type": "found",
+        "type": item_type,
+        "brand": brand,
+        "colour": colour,
+        "location": location,
+        "date": date,
+        "description": description,
+        "status": "active"
+    }
+
+    items.append(item)
+    next_id += 1
+
+    print ("found item created")
+    print (item)
+
 def view_items():
     print ("All reported items")
 
@@ -63,7 +94,7 @@ while choice != "8":
         add_lost_item()
         
     elif choice == "2":
-        print ("Adding a found item\n")
+        add_found_item() 
 
     elif choice == "3":
         view_items()    
