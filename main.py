@@ -1,3 +1,36 @@
+items = []
+next_id = 1
+
+def add_lost_item():
+    global next_id
+
+    print ("adding a lost item")
+
+    item_type = input ("Enter item type: ")
+    brand = input ("Enter the brand: ")
+    colour = input ("Enter the colour: ")
+    location = input ("Enter the location: ")
+    date = input ("Enter the date: ")
+    description = input ("Enter description: ")
+
+    item = {
+        "id": next_id,
+        "report type": "lost",
+        "type": item_type,
+        "brand": brand,
+        "colour": colour,
+        "location": location,
+        "date": date,
+        "description": description,
+        "status": "active"
+    }
+
+    items.append(item)
+    next_id += 1
+
+    print ("lost item created") 
+    print (item)
+
 print ("Campus Lost and Found Matcher")
 print("--------------------------------")
 
@@ -9,14 +42,14 @@ while choice != "8":
     print ("3. View item")
     print ("4. Search item")
     print ("5. Find possible matches")
-    print ("6. Update iterm status")
+    print ("6. Update item status")
     print ("7. View status")
     print ("8. Exit")
 
     choice = input ("Enter your choice: ")
 
     if choice == "1":
-        print ("Adding a lost item\n")
+        add_lost_item()
         
     elif choice == "2":
         print ("Adding a found item\n")
