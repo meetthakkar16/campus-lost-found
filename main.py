@@ -64,6 +64,7 @@ def add_found_item():
     print (item)
 
 def view_items():
+
     print ("All reported items")
 
     if not items:
@@ -82,6 +83,30 @@ def view_items():
         print ("Status: ", item["status"])
 
         print ("-------------------------")
+
+def search_things():
+    search_type = input ("Enter the type of item to search: ")
+
+    found = False
+
+    for item in items:
+        if item["type"] == search_type:
+            print ("\nID:", item["id"])
+            print ("Report type:", item["report type"])
+            print ("Type:", item["type"])
+            print ("Brand:", item["brand"])
+            print ("Colour:", item["colour"])
+            print ("Location:", item["location"])
+            print ("Date:", item["date"])
+            print ("Description:", item["description"])
+            print ("Status: ", item["status"])
+
+            print ("-------------------------")
+            found = True
+
+    if not found:
+        print("No matching items found")
+
 
 print ("Campus Lost and Found Matcher")
 print("--------------------------------")
@@ -110,7 +135,7 @@ while choice != "8":
         view_items()    
 
     elif choice == "4":
-        print ("Searching items\n")
+        search_things()
 
     elif choice == "5":
         print ("Finding possible matches\n")
