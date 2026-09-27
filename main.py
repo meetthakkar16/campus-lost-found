@@ -155,6 +155,20 @@ def item_status():
     else:
         print ("item not found")
             
+def status_view():
+    active_count = 0
+    finished_count = 0
+
+    for item in items:
+        if item ["status"] == "active":
+            active_count += 1
+    print ("active: ", active_count)
+
+    for item in items:
+        if item ["status"] == "finished":
+            finished_count += 1
+    print ("finished", finished_count)
+            
 
 
 print ("Campus Lost and Found Matcher")
@@ -193,7 +207,7 @@ while choice != "8":
         item_status() 
 
     elif choice == "7":
-        print ("Viewing statistics\n")
+        status_view()
 
     elif choice == "8":
         print ("Exiting\n")
