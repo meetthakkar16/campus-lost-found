@@ -140,7 +140,21 @@ def finding_matches():
                         print ("Status: ", found_item["status"])
                         print ("-----------------------------------------")
 
+def item_status():
+    print ("updating item status")
+    input_item = int (input ("Enter item ID: "))
 
+    for item in items:
+        if item ["id"] == input_item:
+            print ("Item found")
+            status_change = input ("What do you want to change status too (active/finished): ")
+            item["status"] = status_change
+            print ("Status changed to: ", item["status"]) 
+            break
+
+    else:
+        print ("item not found")
+            
 
 
 print ("Campus Lost and Found Matcher")
@@ -176,7 +190,7 @@ while choice != "8":
         finding_matches() 
 
     elif choice == "6":
-        print ("Updating item status\n")
+        item_status() 
 
     elif choice == "7":
         print ("Viewing statistics\n")
