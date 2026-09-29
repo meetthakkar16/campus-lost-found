@@ -95,13 +95,37 @@ Data is stored only in memory. It is **not** saved to a file or database. Theref
 project-folder/
 │
 ├── main.py
+├── lostitem.py
+├── founditem.py
+├── matching.py
+├── searchitems.py
+├── status.py
+├── viewitems.py
 ├── README.md
 ├── statement.md
-└── TESTING.md
+
 ```
 
 ### `main.py`
 Contains the complete Python program.
+
+### `lostitem.py`
+Contains function of adding a lost item
+
+### `founditem.py`
+Contains function of adding a found item
+
+### `matching.py`
+Contains function of matching lost item and found item
+
+### `searchitem.py`
+Contains function of searching items that are either lost or found
+
+### `status.py`
+Contains function of viewing  status and changing status (either active or finished)
+
+### `viewitems.py`
+Contains function of viewing the items 
 
 ### `README.md`
 Contains information about the project, its features, setup, and usage.
