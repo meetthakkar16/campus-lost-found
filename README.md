@@ -103,6 +103,11 @@ project-folder/
 ├── viewitems.py
 ├── README.md
 ├── statement.md
+├── data/
+    ├── project report.pdf
+    ├── program flow full.png
+    ├── program flow 1.png
+    ├── program flow 2.png
 
 ```
 
@@ -133,6 +138,11 @@ Contains information about the project, its features, setup, and usage.
 ### `statement.md`
 Contains the problem statement for the project.
 
+### `project report.pdf`
+Contains the complete project report
+
+### `program flow picutres`
+The three images explain the flow of program, full showing the full porgram flow with smaller fonts and the other two with increased fonts 
 
 ## Technologies Used
 
@@ -143,6 +153,7 @@ Contains the problem statement for the project.
 - Loops
 - Conditional statements
 - User input
+- Used separate modules for separate features
 
 No external libraries or packages are required.
 
